@@ -64,6 +64,7 @@ https://docs.microsoft.com/en-us/ef/core/saving/cascade-delete
 
 https://github.com/github/VisualStudio/blob/master/docs/using/publishing-an-existing-project-to-github.md
 https://dev.to/yysun/commit-to-git-in-visual-studio-2019-1lcj
+https://desktop.github.com/
 ---------------------------------------------------------------------------------------------------------------------
 
 Extras
