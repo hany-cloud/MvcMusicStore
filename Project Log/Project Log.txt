@@ -1,0 +1,87 @@
+Lessons learned 
+	don't rename any folder with special char such as C#
+---------------------------------------------------------------------------------------------------------------------
+
+Admin Account
+user:admin
+password:p@ssword1
+---------------------------------------------------------------------------------------------------------------------
+
+Solved Bugs 
+	- Admin menu is alawys diplayed => solved
+	- Some pages, if you try to open them without sending query param it gives error => solved
+	- Where is the logout, change password, etc. functionality => solved
+	- Edit operation in StoreManagerController was't work => solved by remove the attribute [Bind(Execlude..)] from Album model
+
+	Migration functionality in EF6 doesn't work by default and the workaound is use the following link:
+		https://github.com/aspnet/EntityFramework6/issues/1290
+	- Apen project folder in folder explorer then search on "EntityFramework6.psm1".
+	- Open this file and search on "$params += '--data-dir', (Join-Path $startupProjectDir 'App_Data')"
+	- Add the follwoing line "$startupProjectDir = GetProperty $startupProject.Properties 'FullPath'", 
+		before the abovmentioned line in the previous step.
+---------------------------------------------------------------------------------------------------------------------
+
+Temp => Pending Enhancmenets 
+	- Adding the missing comments in the controllers and viewModel
+	- In StoreManager, Index page, the table need the follwoing:
+		-> Add pagination. 
+		-> Add search capability. 
+	- In Store/Details, addtocart, we need to let the user specifying the qauntity. And then 
+		the remove from the cart should remove the whole quantity.
+	- Apply Dependency Injection for all dbContext variables.
+---------------------------------------------------------------------------------------------------------------------
+
+Resources to deploy/define users and roles on web admin tool 
+
+	1- Tool to add aspnet_[User Authintication] tables to your database
+		- Open C:\Windows\Microsoft.NET\Framework64\v4.0.30319 
+			OR cmd => cd C:\Windows\Microsoft.NET\Framework64\v4.0.30319
+		- Open Aspnet_regsql.exe
+			OR run Aspnet_regsql.exe -A all -E -d C:/Users/Jessica/source/repos/MvcMusicStore/App_Data/MusicStoreDB.mdf
+
+	2- open the admin web tool
+		cmd => cd C:\Program Files (x86)\IIS Express
+
+		iisexpress.exe /path:C:\Windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETWebAdminFiles /vpath:/ASP.NETWebAdminFiles /port:44333 /clr:4.0 /ntlm
+
+		http://localhost:44333/asp.netwebadminfiles/default.aspx?applicationPhysicalPath=C:\Hany\CSharp\Projects\MvcMusicStore&applicationUrl=/
+
+---------------------------------------------------------------------------------------------------------------------
+ 
+Useful links
+https://bootsnipp.com/snippets/eNe4v
+https://fontawesome.com/v4.7.0/icons/
+
+https://forums.asp.net/t/1882353.aspx?How+to+display+Current+user+or+login+name+
+https://stackoverflow.com/questions/40931776/how-can-i-hide-show-menu-item-based-on-logged-users-asp-net-mvc
+https://stackoverflow.com/questions/11668261/asp-net-mvc-how-to-hide-or-show-a-link-button-based-on-logged-in-users-role-p
+
+https://www.c-sharpcorner.com/UploadFile/618722/custom-error-page-in-Asp-Net-mvc/
+
+https://stackoverflow.com/questions/19197481/cannot-convert-lambda-expression-to-type-string-because-it-is-not-a-delegate-t
+
+https://docs.microsoft.com/en-us/ef/core/saving/cascade-delete
+
+https://github.com/github/VisualStudio/blob/master/docs/using/publishing-an-existing-project-to-github.md
+https://dev.to/yysun/commit-to-git-in-visual-studio-2019-1lcj
+---------------------------------------------------------------------------------------------------------------------
+
+Extras
+
+Data Source=C:\Users\Jessica\source\repos\MvcMusicStore\App_Data\MvcMusicStore.sdf
+
+Enable-Migrations -EnableAutomaticMigrations
+
+
+<add name="MusicStoreEntities" connectionString="Data Source=.\MSSQLSERVER2017; AttachDbFilename=|DataDirectory|MusicStoreDB.mdf; Database=MusicStoreDB; Integrated Security=True; Uid=sa; Password=sasa;" providerName="System.Data.SqlClient"/>
+
+<add name="ASPNETServices" connectionString="Data Source=DESKTOP-6LV3GBQ\MSSQLSERVER2017; Database=MusicStoreDB; User Id=sa; Password=sasa" providerName="System.Data.SqlClient"/>    
+
+<a href="@Url.Action("Details", new { id = album.AlbumId })"> 
+	<img alt="@album.Title" src="@album.AlbumArtUrl" /> <span>@album.Title</span> 
+</a>
+
+
+C:\Windows\SysWOW64\SQLServerManager14.msc => MSSQL2017  configuration manager tool path
+
+---------------------------------------------------------------------------------------------------------------------
