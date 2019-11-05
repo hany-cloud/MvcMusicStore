@@ -13,9 +13,9 @@ Solved Bugs
 	- Where is the logout, change password, etc. functionality => solved
 	- Edit operation in StoreManagerController was't work => solved by remove the attribute [Bind(Execlude..)] from Album model
 
-	Migration functionality in EF6 doesn't work by default and the workaound is use the following link:
+	Migration functionality in EF6 doesn't work by default and the workaound is to use the following link:
 		https://github.com/aspnet/EntityFramework6/issues/1290
-	- Apen project folder in folder explorer then search on "EntityFramework6.psm1".
+	- Open project folder in folder explorer then search on "EntityFramework6.psm1".
 	- Open this file and search on "$params += '--data-dir', (Join-Path $startupProjectDir 'App_Data')"
 	- Add the follwoing line "$startupProjectDir = GetProperty $startupProject.Properties 'FullPath'", 
 		before the abovmentioned line in the previous step.
