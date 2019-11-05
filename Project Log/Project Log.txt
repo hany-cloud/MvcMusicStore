@@ -29,6 +29,7 @@ Temp => Pending Enhancmenets
 	- In Store/Details, addtocart, we need to let the user specifying the qauntity. And then 
 		the remove from the cart should remove the whole quantity.
 	- Apply Dependency Injection for all dbContext variables.
+	- Add CRUD operations for Artist and Genres in Manager Store.
 ---------------------------------------------------------------------------------------------------------------------
 
 Resources to deploy/define users and roles on web admin tool 
