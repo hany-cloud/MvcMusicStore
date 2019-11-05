@@ -17,9 +17,6 @@ namespace MvcMusicStore.Controllers
         // GET: /Store/
         public ActionResult Index()
         {
-            // Temp Code For test
-            //SampleData.BuildSampleData();
-
             //using (var dbContext = new MusicStoreEntities())
             //{                
             var genres = dbContext.Genres.ToList();
