@@ -7,7 +7,7 @@ It's developed using C#, MVC5, and EF6.
 Please read the MVC Music Store - Tutorial - v3.0.pdf for more information.
 
 You can attach the database files from App_Data folder to start using the project immediately.
-Or In case if you decided not using the deployed database in App_Data folder. 
+Or In case if you decide not using the deployed database in App_Data folder. 
 And by running the application for the first time, the database files will be created automatically for you 
 and a sample data will be inserted into the created database. 
 The only thing that you need to do in this case is to creat the missing aspnet_[User Authintication] tables by using the follwoing steps: 
