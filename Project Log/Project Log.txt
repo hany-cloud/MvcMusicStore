@@ -31,21 +31,23 @@ Temp => Pending Enhancmenets
 	- Apply Dependency Injection for all dbContext variables.
 	- Add CRUD operations for Artist and Genres in Manager Store.
 ---------------------------------------------------------------------------------------------------------------------
+Resources to create/define users and roles on web admin tool 
 
-Resources to deploy/define users and roles on web admin tool 
+		1- Tool to add aspnet_[User Authintication] tables to your database
+			- Open C:\Windows\Microsoft.NET\Framework64\v4.0.30319 
+				OR cmd => cd C:\Windows\Microsoft.NET\Framework64\v4.0.30319
+			- Open Aspnet_regsql.exe
+				OR run Aspnet_regsql.exe -A all -E -d [Application Directory]/App_Data/MusicStoreDB.mdf
 
-	1- Tool to add aspnet_[User Authintication] tables to your database
-		- Open C:\Windows\Microsoft.NET\Framework64\v4.0.30319 
-			OR cmd => cd C:\Windows\Microsoft.NET\Framework64\v4.0.30319
-		- Open Aspnet_regsql.exe
-			OR run Aspnet_regsql.exe -A all -E -d C:/Users/Jessica/source/repos/MvcMusicStore/App_Data/MusicStoreDB.mdf
+		2- open the admin web tool
+			- cmd => cd C:\Program Files (x86)\IIS Express
 
-	2- open the admin web tool
-		cmd => cd C:\Program Files (x86)\IIS Express
+			- By Assuming the port # is 44333  and the Application Directory is C:\Hany\CSharp\Projects\MvcMusicStore,
+			  you can run the  iisexpress as follows:
+			  iisexpress.exe /path:C:\Windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETWebAdminFiles /vpath:/ASP.NETWebAdminFiles /port:44333 /clr:4.0 /ntlm
 
-		iisexpress.exe /path:C:\Windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETWebAdminFiles /vpath:/ASP.NETWebAdminFiles /port:44333 /clr:4.0 /ntlm
-
-		http://localhost:44333/asp.netwebadminfiles/default.aspx?applicationPhysicalPath=C:\Hany\CSharp\Projects\MvcMusicStore&applicationUrl=/
+			- The you can use the follwoing URL to open the web admin tool to create roles and users: 
+			http://localhost:44333/asp.netwebadminfiles/default.aspx?applicationPhysicalPath=C:\Hany\CSharp\Projects\MvcMusicStore&applicationUrl=/
 
 ---------------------------------------------------------------------------------------------------------------------
  
