@@ -27,6 +27,6 @@ The only thing that you need to do in this case is to creat the missing aspnet_[
 			  you can run the  iisexpress as follows:
 			  iisexpress.exe /path:C:\Windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETWebAdminFiles /vpath:/ASP.NETWebAdminFiles /port:44333 /clr:4.0 /ntlm
 
-			- The you can use the follwoing URL to open the web admin tool to create roles and users: 
+			- Then you can use the follwoing URL to open the web admin tool to create roles and users: 
 			http://localhost:44333/asp.netwebadminfiles/default.aspx?applicationPhysicalPath=C:\Hany\CSharp\Projects\MvcMusicStore&applicationUrl=/
 			 
